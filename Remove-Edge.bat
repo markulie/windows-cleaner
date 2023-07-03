@@ -1,15 +1,7 @@
 @echo off
 
-:: https://briteccomputers.co.uk/posts/how-to-uninstall-microsoft-edge-in-one-click-2/
-:: Creator: Dave Kirkwood
-:: Modified:By Britec
-:: Created: 24/09/2020
-:: Updated: 21/09/2022
-::
-
 :: First Stop Microsoft Edge Task
 taskkill /F /IM msedge.exe  >nul 2>&1
-
 
 CD %HOMEDRIVE%%HOMEPATH%\Desktop
 echo %CD%
@@ -88,7 +80,7 @@ takeown /f "C:\Windows\System32\%%a" > NUL 2>&1
 icacls "C:\Windows\System32\%%a" /inheritance:e /grant "%UserName%:(OI)(CI)F" /T /C > NUL 2>&1
 del /S /Q "C:\Windows\System32\%%a" > NUL 2>&1))
 
-::delshortcut
+:delshortcut
 echo|set /p=Removing shortcut %1
 if exist %1 (
 	del %1
