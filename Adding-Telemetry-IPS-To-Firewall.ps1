@@ -1,5 +1,3 @@
-#Adding telemetry ips to firewall
-
 $ips = @(
     # Windows telemetry
     "134.170.30.202"
@@ -34,5 +32,4 @@ $ips = @(
     "216.228.121.209"
 )
 Remove-NetFirewallRule -DisplayName "Block Telemetry IPs" -ErrorAction SilentlyContinue
-New-NetFirewallRule -DisplayName "Block Telemetry IPs" -Direction Outbound `
-    -Action Block -RemoteAddress ([string[]]$ips)
+New-NetFirewallRule -DisplayName "Block Telemetry IPs" -Direction Outbound ` -Action Block -RemoteAddress ([string[]]$ips)

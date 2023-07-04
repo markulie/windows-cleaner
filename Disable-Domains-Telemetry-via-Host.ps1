@@ -1,6 +1,3 @@
-
-# This script blocks telemetry related domains via the hosts file and related IPs via Windows Firewall.
-
 # Entries related to Akamai have been reported to cause issues with Widevine DRM. C:\Windows\System32\drivers\etc
 
 $hosts_file = "$env:systemroot\System32\drivers\etc\hosts" 
@@ -182,7 +179,7 @@ $domains = @(
     #"ui.skype.com"
     
     
-    # Adobe
+  # Adobe
   "activation.cloud.techsmith.com"
   "oscount.techsmith.com"
   "3dns.adobe.com"
@@ -338,7 +335,7 @@ $domains = @(
   "www.dev1.ipm.corel.public.corel.net"
   "dev1.ipm.corel.public.corel.net"
 
-#Iplogger
+# Iplogger
   "ezstat.ru"
   "iplogger.org"
   "2no.co"
@@ -358,84 +355,3 @@ foreach ($domain in $domains) {
         Write-Output "0.0.0.0 $domain" | Out-File -Encoding ASCII -Append $hosts_file
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

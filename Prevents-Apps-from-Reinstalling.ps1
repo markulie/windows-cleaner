@@ -1,4 +1,3 @@
-# Prevents Apps from re-installing
 $cdm = @(
     "ContentDeliveryAllowed"
     "FeatureManagementEnabled"
@@ -23,6 +22,5 @@ foreach ($key in $cdm) {
 New-FolderForced -Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore"
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore" "AutoDownload" 2
 
-# Prevents "Suggested Applications" returning
 New-FolderForced -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent"
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent" "DisableWindowsConsumerFeatures" 1
