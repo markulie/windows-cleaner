@@ -1,8 +1,7 @@
-# This script removes unwanted Apps that come with Windows.
-
 Write-Output "Uninstalling default apps"
 $apps = @(
-    # default Windows 10 apps
+    # Default Windows Apps
+
     #"Microsoft.WindowsStore"   # can't be re-installed
     #"Microsoft.Windows.Photos"
     #"Microsoft.WindowsCalculator"

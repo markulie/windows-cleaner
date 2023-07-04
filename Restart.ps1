@@ -1,1 +1,1 @@
-shutdown /r # restart
+shutdown /r
