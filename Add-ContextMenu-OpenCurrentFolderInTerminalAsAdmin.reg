@@ -1,0 +1,63 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Terminal as Admin"
+"Extended"=-
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\001flyout]
+"MUIVerb"="Default Profile"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\001flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\002flyout]
+"MUIVerb"="Command Prompt"
+"Icon"="imageres.dll,-5324"
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\002flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"Command Prompt\"\"\"','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\003flyout]
+"MUIVerb"="PowerShell"
+"HasLUAShield"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\003flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"Windows PowerShell\"\"\"','-d','\"\"\"%1\\.\"\"\"')\""
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Terminal as Admin"
+"Extended"=-
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\001flyout]
+"MUIVerb"="Default Profile"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\001flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\002flyout]
+"MUIVerb"="Command Prompt"
+"Icon"="imageres.dll,-5324"
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\002flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"Command Prompt\"\"\"','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\003flyout]
+"MUIVerb"="PowerShell"
+"HasLUAShield"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\003flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"Windows PowerShell\"\"\"','-d','\"\"\"%V\\.\"\"\"')\""
