@@ -30,6 +30,7 @@ $disableServices = @(
     "uhssvc"
 )
 
+
 foreach ($disableService in $disableServices) {
     Write-Output "Trying to disable $service"
     Get-Service -Name $disableService | Set-Service -StartupType Disabled
