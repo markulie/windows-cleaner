@@ -1,3 +1,5 @@
+Set-ExecutionPolicy RemoteSigned
+
 Write-Output "Uninstalling default apps"
 $apps = @(
     # Default Windows Apps
